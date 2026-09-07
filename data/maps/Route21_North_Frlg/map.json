@@ -3,7 +3,6 @@
   "name": "Route21_North_Frlg",
   "layout": "LAYOUT_ROUTE21_NORTH",
   "music": "MUS_RG_ROUTE3",
-  "region": "REGION_KANTO",
   "region_map_section": "MAPSEC_ROUTE_21",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
@@ -30,7 +29,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "x": 7,
+      "x": 23,
       "y": 27,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -44,7 +43,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "x": 16,
+      "x": 32,
       "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -58,7 +57,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
-      "x": 12,
+      "x": 28,
       "y": 44,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_UP_RIGHT_DOWN",
@@ -72,7 +71,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER",
-      "x": 14,
+      "x": 30,
       "y": 35,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -86,7 +85,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M_WATER",
-      "x": 15,
+      "x": 31,
       "y": 35,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -100,22 +99,18 @@
     {
       "type": "clone",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_FRLG",
-      "x": 13,
+      "x": 29,
       "y": -3,
       "target_local_id": "LOCALID_PALLET_FAT_MAN",
       "target_map": "MAP_PALLET_TOWN"
     }
   ],
-  "warp_events": [
-
-  ],
-  "coord_events": [
-
-  ],
+  "warp_events": [],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "hidden_item",
-      "x": 17,
+      "x": 33,
       "y": 42,
       "elevation": 3,
       "item": "ITEM_PEARL",
@@ -123,5 +118,6 @@
       "quantity": 1,
       "underfoot": false
     }
-  ]
+  ],
+  "region": "REGION_KANTO"
 }

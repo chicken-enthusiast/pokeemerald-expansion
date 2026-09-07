@@ -202,12 +202,12 @@ PalletTown_EventScript_OakTrigger::
 	delay 30
 	call_if_eq VAR_TEMP_1, 0, PalletTown_EventScript_OakLeadPlayerToLabLeft
 	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_OakLeadPlayerToLabRight
-	opendoor 16, 13
+	opendoor 5, 6
 	waitdooranim
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakEnterLab
 	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerEnterLab
 	waitmovement 0
-	closedoor 16, 13
+	closedoor 5, 6
 	waitdooranim
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1
 	clearflag FLAG_HIDE_OAK_IN_HIS_LAB
@@ -242,6 +242,7 @@ PalletTown_EventScript_OakLeadPlayerToLabRight::
 	return
 
 PalletTown_Movement_OakEnterLeft::
+	walk_right
 	walk_up
 	walk_up
 	walk_right
@@ -254,6 +255,7 @@ PalletTown_Movement_OakEnterLeft::
 
 PalletTown_Movement_OakEnterRight::
 	walk_right
+	walk_right
 	walk_up
 	walk_up
 	walk_right
@@ -265,28 +267,51 @@ PalletTown_Movement_OakEnterRight::
 	step_end
 
 	.macro walk_to_lab
+	walk_down
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
 	walk_left
 	walk_down
 	walk_down
 	walk_down
 	walk_down
 	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_left
+	walk_up
+	walk_up
+	walk_left
+	walk_up
+	walk_up
 	.endm
 
 PalletTown_Movement_OakWalkToLabLeft::
 	walk_down
 	walk_to_lab
-	walk_right
+	walk_up
 	walk_in_place_faster_up
 	step_end
 
@@ -294,7 +319,7 @@ PalletTown_Movement_OakWalkToLabRight::
 	walk_down
 	walk_left
 	walk_to_lab
-	walk_right
+	walk_up
 	walk_in_place_faster_up
 	step_end
 
@@ -317,7 +342,7 @@ PalletTown_Movement_PlayerWalkToLabRight::
 	step_end
 
 PalletTown_Movement_PlayerEnterLab::
-	walk_right
+	walk_up
 	walk_up
 	set_invisible
 	step_end
